@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: cadetblue;
+  padding: 10px;
+  color: white;
+  box-shadow: 0px 5px 5px #777;
+  margin-bottom: 20px;
+}
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #447879;
+}
+.nav-item {
+  display: inline-block;
+  padding: 5px;
+}
+.btn-link {
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-link:hover {
+  transform: scale(1.1);
+  transition: transform 0.1s;
+}
+.active {
+  cursor: default;
+  color: chartreuse;
+}

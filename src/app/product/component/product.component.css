@@ -1,0 +1,38 @@
+.table-wrapper {
+  padding: 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+  height: 450px;
+  overflow: auto;
+}
+.add-product-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #ddd;
+  margin-bottom: 20px;
+}
+
+.btn-panel {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.title {
+  padding: 10px;
+  background-color: cadetblue;
+  color: white;
+  font-weight: bold;
+}
+.add-panel {
+  padding: 10px 0;
+}
+input {
+  width: 25%;
+}
+table {
+  max-height: 200px;
+  overflow: auto;
+}

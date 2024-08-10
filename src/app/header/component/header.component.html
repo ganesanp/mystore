@@ -1,0 +1,64 @@
+<div class="container">
+  <h3>My Store</h3>
+
+  <nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button
+            type="button"
+            name="home"
+            class="btn btn-link"
+            [class.active]="page === 'home'"
+            (click)="navigate($event)"
+          >
+            Home
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            type="button"
+            name="product"
+            class="btn btn-link"
+            [class.active]="page === 'product'"
+            (click)="navigate($event)"
+          >
+            Product
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            type="button"
+            name="list"
+            class="btn btn-link"
+            [class.active]="page === 'list'"
+            (click)="navigate($event)"
+          >
+            List
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            type="button"
+            name="contact"
+            class="btn btn-link"
+            [class.active]="page === 'contact'"
+            (click)="navigate($event)"
+          >
+            Contact
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            type="button"
+            name="logout"
+            class="btn btn-link"
+            (click)="navigate($event)"
+          >
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

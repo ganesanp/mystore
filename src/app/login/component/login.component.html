@@ -1,0 +1,66 @@
+<div class="container">
+  <!-- Login -->
+  <div *ngIf="isLogin" class="wrapper">
+    <h3 class="title">Login</h3>
+    <div class="row px-3">
+      <label class="mb-1 label">Email Address</label>
+      <input
+        class="mb-4"
+        type="text"
+        name="email"
+        placeholder="Enter a valid email address"
+      />
+    </div>
+    <div class="row px-3">
+      <label class="mb-1 label">Password</label>
+      <input type="password" name="password" placeholder="Enter password" />
+    </div>
+
+    <div class="btn-panel">
+      <small class="font-weight-bold"
+        >Don't have an account?
+        <a (click)="showRegister()">Register</a>
+      </small>
+      <button type="submit" class="btn btn-blue text-center" (click)="login()">
+        Login
+      </button>
+    </div>
+  </div>
+
+  <!-- Registration -->
+  <div *ngIf="!isLogin" class="wrapper">
+    <h3 class="title">Registration</h3>
+    <div class="row px-3">
+      <label class="mb-1 label">Name</label>
+      <input class="mb-4" type="text" name="name" placeholder="Enter Name" />
+    </div>
+    <div class="row px-3">
+      <label class="mb-1 label">Email Address</label>
+      <input
+        class="mb-4"
+        type="text"
+        name="email"
+        placeholder="Enter a valid email address"
+      />
+    </div>
+    <div class="row px-3">
+      <label class="mb-1 label">Password</label>
+      <input type="password" name="password" placeholder="Enter password" />
+    </div>
+    <div class="row px-3">
+      <label class="mb-1 label">Confirm Password</label>
+      <input type="password" name="password" placeholder="Confirm password" />
+    </div>
+
+    <div class="btn-panel">
+      <small class="rights">All rights reserved </small>
+      <button
+        type="submit"
+        class="btn btn-blue text-center"
+        (click)="register()"
+      >
+        Register
+      </button>
+    </div>
+  </div>
+</div>

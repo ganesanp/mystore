@@ -1,0 +1,58 @@
+<div class="add-product-container">
+  <h3>Add your Product</h3>
+  <!-- <input type="text" #productName placeholder="Product Name" /> -->
+  <mat-form-field>
+    <mat-label>Product Name</mat-label>
+    <input matInput #productName />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Unit Price</mat-label>
+    <input matInput #unitPrice />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Quantity</mat-label>
+    <input matInput #quantity />
+  </mat-form-field>
+  <button
+    mat-raised-button
+    (click)="addProduct(productName.value, unitPrice.value, quantity.value)"
+  >
+    Add Product
+  </button>
+</div>
+
+<div class="table-wrapper">
+  <div class="title">Product List</div>
+  <table class="table table-hover" border="1">
+    <thead>
+      <tr>
+        <td></td>
+        <td>S.No.</td>
+        <td>Product Name</td>
+        <td>Unit Price</td>
+        <td>Quantity</td>
+        <td>Total Amount</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products | async; let i = index">
+        <td>
+          <input type="checkbox" (change)="onSelect($event, product)" />
+        </td>
+        <td>{{ i + 1 }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price | amount }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.total | amount }}</td>
+      </tr>
+      <tr *ngIf="(products | async)?.length == 0">
+        No Record
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="btn-panel">
+  <button (click)="removeProduct()" class="btn btn-primary" type="button">
+    Remove Product
+  </button>
+</div>
