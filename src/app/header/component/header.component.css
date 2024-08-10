@@ -32,4 +32,5 @@
 .active {
   cursor: default;
   color: chartreuse;
+  text-decoration: underline;
 }
